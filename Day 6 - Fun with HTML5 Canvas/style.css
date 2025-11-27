@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+  background: #f0f0f0;
+}
+canvas {
+  display: block;
+}
+
+.controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: sans-serif;
+}
+
+#clearButton {
+  padding: 8px 15px;
+  font-size: 14px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#brushSize {
+  cursor: pointer;
+}

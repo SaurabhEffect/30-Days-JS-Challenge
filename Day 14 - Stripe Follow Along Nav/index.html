@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modern Stripe Nav</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="top">
+      <div class="dropdownBackground">
+        <span class="arrow"></span>
+      </div>
+
+      <ul class="cool">
+        <li>
+          <a href="#">About Me</a>
+          <div class="dropdown dropdown1">
+            <div class="bio">
+              <img
+                src="https://avatars.githubusercontent.com/u/176013?v=4"
+                alt="Wes Bos"
+              />
+              <div>
+                <h3>Wes Bos</h3>
+                <p>
+                  Fullstack Developer & Teacher. I break things so you can learn
+                  how to fix them.
+                </p>
+                <a href="#" class="bio-link">View Portfolio &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">Courses</a>
+          <ul class="dropdown courses">
+            <li>
+              <span class="code red">RFB</span>
+              <a href="#">React For Beginners</a>
+            </li>
+            <li>
+              <span class="code yellow">ES6</span>
+              <a href="#">ES6 For Everyone</a>
+            </li>
+            <li>
+              <span class="code green">NODE</span>
+              <a href="#">Learn Node</a>
+            </li>
+            <li>
+              <span class="code purple">GQL</span>
+              <a href="#">Fullstack GraphQL</a>
+            </li>
+            <li>
+              <span class="code blue">GRID</span>
+              <a href="#">CSS Grid</a>
+            </li>
+            <li>
+              <span class="code pink">LRX</span>
+              <a href="#">Learn Redux</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Connect</a>
+          <ul class="dropdown dropdown3">
+            <li>
+              <a class="social-button twitter" href="#">
+                <span class="icon">𝕏</span> Twitter
+              </a>
+            </li>
+            <li>
+              <a class="social-button facebook" href="#">
+                <span class="icon">f</span> Facebook
+              </a>
+            </li>
+            <li>
+              <a class="social-button blog" href="#">
+                <span class="icon">✍️</span> Blog
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hero-text">
+      <h1>Experience the<br /><span>Fluid Motion.</span></h1>
+      <p>Hover over the navigation to see the dynamic background adaptation.</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

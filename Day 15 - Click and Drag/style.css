@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #1a1a1a;
+  color: white;
+  overflow: hidden;
+}
+
+.header-text {
+  text-align: center;
+  margin-bottom: 20px;
+  pointer-events: none;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+.items {
+  height: 500px;
+  padding: 50px 0;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: grab;
+  position: relative;
+  background: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.items::-webkit-scrollbar {
+  display: none;
+}
+
+.items.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.item {
+  width: 300px;
+  height: 400px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.item .content h2 {
+  font-size: 80px;
+  margin: 0;
+  line-height: 1;
+  opacity: 0.2;
+}
+
+.item .content p {
+  font-size: 24px;
+  margin: 10px 0 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.item:nth-child(5n + 1) {
+  border-top: 5px solid dodgerblue;
+}
+.item:nth-child(5n + 2) {
+  border-top: 5px solid tomato;
+}
+.item:nth-child(5n + 3) {
+  border-top: 5px solid goldenrod;
+}
+.item:nth-child(5n + 4) {
+  border-top: 5px solid rebeccapurple;
+}
+.item:nth-child(5n + 5) {
+  border-top: 5px solid lightseagreen;
+}
+
+.item:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.items.active .item {
+  transform: scale(1);
+}

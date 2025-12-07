@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Countdown Timer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="timer">
+      <div class="timer__controls">
+        <button data-time="20" class="timer__button">20 Secs</button>
+        <button data-time="300" class="timer__button">Work 5</button>
+        <button data-time="900" class="timer__button">Quick 15</button>
+        <button data-time="1200" class="timer__button">Snack 20</button>
+        <button data-time="3600" class="timer__button">Lunch Break</button>
+        <form name="customForm" id="custom">
+          <input
+            type="text"
+            name="minutes"
+            placeholder="Enter Minutes"
+            autocomplete="off"
+          />
+        </form>
+      </div>
+
+      <div class="display">
+        <h1 class="display__time-left">00:00</h1>
+        <p class="display__end-time">Take a break</p>
+
+        <div class="timer__manual-controls">
+          <button class="control-btn" id="pauseButton" title="Pause/Resume">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button class="control-btn" id="stopButton" title="Stop">
+            <i class="fas fa-stop"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <audio
+      id="timer-beep"
+      src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"
+    ></audio>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

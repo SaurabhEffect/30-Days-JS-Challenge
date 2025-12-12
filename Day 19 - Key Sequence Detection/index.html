@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🕵️ Secret Code Detector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sequence Detector ⚠️</h1>
+      <p class="instruction">Enter the correct authorization code...</p>
+      <div class="key-display" id="currentKey">_</div>
+      <div class="history" id="keyHistory">...</div>
+      <div class="success-message" id="successMsg">SYSTEM BREACHED! RUN!</div>
+
+      <div>
+        <button class="hint-btn" onclick="showHint()">ACCESS HINT</button>
+        <div class="hint-text" id="hint">Code: "saurabh"</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

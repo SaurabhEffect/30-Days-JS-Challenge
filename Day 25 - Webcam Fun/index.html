@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neon Photobooth 📸</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="photobooth">
+      <header>
+        <h1>Neon<span class="highlight">Booth</span></h1>
+      </header>
+
+      <div class="viewfinder">
+        <div class="flash-overlay"></div>
+        <canvas class="photo"></canvas>
+        <video class="player"></video>
+      </div>
+
+      <div class="controls">
+        <div class="filter-group">
+          <label>Filters:</label>
+          <div class="buttons">
+            <button data-filter="normal" class="active">Normal</button>
+            <button data-filter="redEffect">Vintage</button>
+            <button data-filter="rgbSplit">Cyberpunk</button>
+            <button data-filter="grayscale">Noir</button>
+            <button data-filter="ghost">Ghost</button>
+          </div>
+        </div>
+
+        <button onClick="takePhoto()" class="shutter-btn">
+          <span class="shutter-inner">SNAP</span>
+        </button>
+      </div>
+
+      <div class="strip-container">
+        <h3>Your Snaps</h3>
+        <div class="strip"></div>
+      </div>
+    </div>
+
+    <audio class="snap" src="./snap.mp3" hidden></audio>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

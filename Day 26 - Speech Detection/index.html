@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Smart AI Notebook</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-microphone-alt"></i> Smart Notebook</h1>
+        <div class="status-indicator" id="status">Listening...</div>
+      </header>
+
+      <div class="toolbar">
+        <button onclick="copyText()" title="Copy Text">
+          <i class="fas fa-copy"></i>
+        </button>
+        <button onclick="downloadText()" title="Save as File">
+          <i class="fas fa-download"></i>
+        </button>
+        <button onclick="toggleTheme()" title="Toggle Dark/Light">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button onclick="clearPad()" class="danger" title="Clear All">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+
+      <div class="words" contenteditable="true" spellcheck="false">
+        <p>Start speaking...</p>
+      </div>
+
+      <div class="hints">
+        <small
+          >💡 <b>Try saying:</b> "Idea", "Fire", "Love", "Delete everything",
+          "Stop listening"</small
+        >
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

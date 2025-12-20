@@ -1,0 +1,147 @@
+:root {
+  --bg-color: #f0f2f5;
+  --paper-bg: #fff;
+  --line-color: #a3c2c2;
+  --text-color: #2c3e50;
+  --accent: #4a90e2;
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --font-family: "Patrick Hand", cursive;
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --paper-bg: #2d2d2d;
+  --line-color: #404040;
+  --text-color: #e0e0e0;
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: "helvetica neue", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  transition: background 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+body.dark-mode header {
+  color: #bbb;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.status-indicator {
+  font-size: 1.2rem;
+  color: red;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  padding: 0 1rem;
+}
+
+button {
+  background: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  color: var(--accent);
+}
+
+button.danger:hover {
+  color: #e74c3c;
+}
+
+.words {
+  background: var(--paper-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 2rem 2rem 2rem 5rem;
+  position: relative;
+  line-height: 3rem;
+  min-height: 50vh;
+  outline: none;
+  font-family: var(--font-family);
+  font-size: 2.4rem;
+  color: var(--text-color);
+  background-image: linear-gradient(
+    transparent 2.9rem,
+    var(--line-color) 2.9rem
+  );
+  background-size: 100% 3rem;
+  margin-top: 2rem;
+}
+
+.words:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  top: 0;
+  left: 35px;
+  bottom: 0;
+  background: #ff9999;
+  opacity: 0.8;
+}
+
+p {
+  margin: 0;
+}
+
+.hints {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+  font-size: 1.4rem;
+}

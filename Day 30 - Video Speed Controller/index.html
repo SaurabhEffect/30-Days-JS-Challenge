@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video Speed Controller</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="video-container">
+        <video
+          class="flex"
+          width="765"
+          height="430"
+          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          loop
+          controls
+        ></video>
+
+        <div class="controls">
+          <button data-speed="1">Normal (1x)</button>
+          <button data-speed="1.5">1.5x</button>
+          <button data-speed="2">2x</button>
+          <button data-speed="3">3x</button>
+        </div>
+      </div>
+
+      <div class="speed">
+        <div class="speed-bar">1×</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
